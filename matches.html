@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="img/fontawesome-free-5.15.4-web/css/all.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="img/icon.svg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>THWP - Matches</title>
+  </head>
+  <body>
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-expand-lg d-flex align-items-center">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/thwp-logo-no-shadow.svg"
+            alt="thwp logo"
+            height="30"
+            class="align-items-end mb-0.5"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="material-symbols-rounded"> menu </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling"
+                aria-current="page"
+                href="#"
+                >Matches</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Web of Love</a>
+            </li>
+          </ul>
+          <hr class="d-lg-none my-2" />
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 leftnavbar">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Messages</a>
+            </li>
+            <li class="nav-item divider d-none d-sm-block"></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <!-- DROPDOWN MENU -->
+                My Account
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                id="myaccount-dropdown"
+              >
+                <li id="profile-account">
+                  <a href="#" class="dropdown-item disabled">
+                    <div class="text-center">
+                      <div class="d-flex justify-content-center">
+                        <img
+                          src="img/profiles/Olvo.jpg"
+                          alt="profile pic of olvo"
+                          class="img-fluid"
+                          id="profile-pic"
+                        />
+                      </div>
+
+                      <p class="my-0 py-0 fs-4">
+                        <strong>Olvo Aladeen</strong>
+                      </p>
+                      <span class="badge rounded-pill text-bg-success"
+                        >Active</span
+                      >
+                    </div></a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-end" href="#">My Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#"
+                    >Account Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#"
+                    >Privacy Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#">Help & Support</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-end" id="logoutbtn" href="#"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR  -->
+    <section id="matches-neutral-body">
+      <!-- START SIDEBAR -->
+      <div
+        class="offcanvas offcanvas-start show"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+            Offcanvas with body scrolling
+          </h5>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            Try scrolling the rest of the page to see this option in action.
+          </p>
+        </div>
+      </div>
+      <!-- END SIDEBAR -->
+    </section>
+    <!-- START FOOTER (commented out for this page)-->
+    <!-- <footer>
+      <div class="container footer mt-4" id="footer-container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <span class="fs-5"><strong>Legal</strong></span>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Intellectual Property</a></li>
+            </ul>
+          </div>
+          <hr class="d-block d-sm-none my-3" />
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <span class="fs-5"><strong>Careers</strong></span>
+            <ul>
+              <li><a href="#">Careers Portal</a></li>
+              <li><a href="#">Tech Blog</a></li>
+            </ul>
+          </div>
+          <hr class="d-block d-md-none my-3" />
+          <div class="col-lg-3 col-md-4 col-sm-6" id="socials">
+            <span class="fs-5"><strong>Social</strong></span>
+            <ul class="list-unstyled d-flex fs-4" id="socmed-icon-list">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/maynard-arvin-villalobos-lpt-7a7aa3242/"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/zzzarkaztik" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/maynard-arvin-villalobos-lpt-7a7aa3242/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/zzzarkaztik" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCMKiL3I0-ga4qgZJaMkCieA"
+                  target="_blank"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <hr class="d-block d-lg-none my-3" />
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <ul class="text-secondary">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Destinations</a></li>
+              <li><a href="#">Press Room</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Gift Cards</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="mb-4" />
+      <div class="container text-center text-secondary" id="footer-footer">
+        <div class="row">
+          <div>
+            <p>
+              <a href="#">FAQ</a> | <a href="#">Safety Tips</a> |
+              <a href="#">Terms</a> | <a href="#">Cookie</a> |
+              <a href="#">Privacy</a>
+            </p>
+            <p>
+              ©2023 ZZZarkaztik Graphics by Arvs Villalobos, All Rights
+              Reserved.
+            </p>
+            <span
+              ><sup
+                >Thwp, conceptualized by ZZZarkaztik Graphics for academic and
+                personal use, is not for commercial purposes. Any resemblance to
+                real entities is coincidental. "Thwip" is a trademark of Marvel.
+                ZZZarkaztik Graphics assumes no responsibility for unintended
+                use.</sup
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- END FOOTER -->
+  </body>
+</html>
